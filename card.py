@@ -1,31 +1,28 @@
 import random
 
 class Card:
-    """A playing card that displays numbers.
-    The responsibility of playing cards is to display numbers and judge if it is high or not.
-    Track the point according to the guessing.
 
-    Attributes:
-        value (int): the number to the flip the card.
-        points (int): the numbers of point earned if the user guess
-    """
-def __init__(self):
-    """Constructs a new instance of playing cards with a value and points attribute.
-
-    Args:
-        self (card): An instance of playing card.
-    """
-    self.value = 0
-    self.points =0
-
-def flip(self):
-    """Display the random numbers for gamer can guess the next card
-        
-    Args:
-        self(card): An instance of card
-    """
-    self.value = random.randint(1,13)
+    """display the cards radnomly.
     
+    Atributes:
+    value (int): random number
+    nextValue (int): second number to compare"""
+
+
+    def __init__(self):
+        self.value = 0
+        self.nextValue = 0
+
+    
+    def newNumber(self):
+        """Generates a new number"""
+        self.value = random.randint(1, 13)
+        print(f"The Card is: {self.value} ")
+
+        """Generates a second random number to compare with the first one"""
+    def nextNumber(self):
+        self.nextValue = random.randint(1, 13)
+        print(f"Next Card was: {self.nextValue} ")
             
             
             
